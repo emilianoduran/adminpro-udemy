@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { $ } from 'protractor';
+import { Router } from '@angular/router';
 
+declare let $: any;
 // tslint:disable-next-line:no-unused-expression
 
 @Component({
@@ -18,13 +19,18 @@ export class LoginComponent implements OnInit {
    * recuperaPass
    */
   public recuperaPass() {
-    // $('#loginform').slideUp();
-    // $('#recoverform').fadeIn();
+    $('#loginform').slideUp();
+    $('#recoverform').fadeIn();
   }
   /**
    * crearCuenta
    */
   public crearCuenta() {
     this.usuario = false;
+  }
+
+  cancelarRegenerar() {
+    $('#loginform').slideDown();
+    $('#recoverform').fadeOut();
   }
 }
