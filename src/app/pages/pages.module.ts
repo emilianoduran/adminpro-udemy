@@ -6,8 +6,9 @@ import { ProgressComponent } from './progress/progress.component';
 import { PageComponent } from './page.component';
 // Routes child
 import { PAGES_ROUTES } from './pages.routing';
+import { SharedModule } from './shared/shared.module';
 // Shareds Modules
-import { SharedModule } from '../shared/shared.module';
+
 @NgModule({
   declarations: [DashboardComponent, Graficas1Component, ProgressComponent, PageComponent],
   imports: [CommonModule, SharedModule, PAGES_ROUTES],
