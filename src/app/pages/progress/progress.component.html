@@ -1,5 +1,5 @@
-<h1>Progress</h1>
-<hr>
+<!-- <h1>Progress</h1>
+<hr> -->
 
 <div class="row">
     <div class="col-12">
@@ -7,8 +7,34 @@
             <div class="card-body">
                 <h4 class="card-title">Barra de progreso</h4>
                 <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    <!-- Atributos personalizados en angular -->
+                    <!-- [attr.aria-valuenow] es un atributo personalizado por eso se antepone la propiedad attr. -->
+                    <!-- para hacer referencia a la propiedad [style.width]="variable + '%'" porque el valor es porcentual -->
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.aria-valuenow]="progreso" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso +'%'"></div>
                 </div>
+                <br>
+                <div class="progress">
+
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.aria-valuenow]="progreso" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso +'%'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-incrementador leyenda="Progress Azul" [progreso]="20"></app-incrementador>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <app-incrementador leyenda="Progress Verde" [progreso]="40"></app-incrementador>
             </div>
         </div>
     </div>
