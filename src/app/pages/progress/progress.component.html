@@ -10,12 +10,12 @@
                     <!-- Atributos personalizados en angular -->
                     <!-- [attr.aria-valuenow] es un atributo personalizado por eso se antepone la propiedad attr. -->
                     <!-- para hacer referencia a la propiedad [style.width]="variable + '%'" porque el valor es porcentual -->
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.aria-valuenow]="progreso" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso +'%'"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.aria-valuenow]="progreso1" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso1 +'%'"></div>
                 </div>
                 <br>
                 <div class="progress">
 
-                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.aria-valuenow]="progreso" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso +'%'"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.aria-valuenow]="progreso2" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso2 +'%'"></div>
                 </div>
             </div>
         </div>
@@ -26,7 +26,10 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <app-incrementador leyenda="Progress Azul" [progreso]="20"></app-incrementador>
+                <!-- EventEmitter (cambioValor) es una función que funciona como @output. -->
+                <!-- Los artributos del output son utilizados sobre la etiqueta del componente. -->
+                <!-- El atributo leyenda no posee [] porque pasa un string pero en el caso de progreso si porque pasa un número -->
+                <app-incrementador (cambioValor)="progreso1=$event" leyenda="Progress Azul" [progreso]="progreso1"></app-incrementador>
             </div>
         </div>
     </div>
@@ -34,7 +37,7 @@
         <div class="card">
             <div class="card-body">
 
-                <app-incrementador leyenda="Progress Verde" [progreso]="40"></app-incrementador>
+                <app-incrementador (cambioValor)="progreso2=$event" leyenda="Progress Verde" [progreso]="progreso2"></app-incrementador>
             </div>
         </div>
     </div>
