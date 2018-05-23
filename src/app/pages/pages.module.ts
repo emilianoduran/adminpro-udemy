@@ -4,6 +4,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
 import { PageComponent } from './page.component';
 import { ProgressComponent } from './progress/progress.component';
+import { AccountSettingComponent } from './account-setting/account-setting.component';
+import { PromesasComponent } from './promesas/promesas.component';
 
 // Routes child
 import { PAGES_ROUTES } from './pages.routing';
@@ -16,10 +18,20 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 // Gráficas
 import { ChartsModule } from 'ng2-charts';
 import { GraficaDonaComponent } from '../components/grafica-dona/grafica-dona.component';
-import { AccountSettingComponent } from './account-setting/account-setting.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
-  declarations: [DashboardComponent, Graficas1Component, PageComponent, ProgressComponent, IncrementadorComponent, GraficaDonaComponent, AccountSettingComponent],
+  declarations: [
+    DashboardComponent,
+    Graficas1Component,
+    PageComponent,
+    ProgressComponent,
+    IncrementadorComponent,
+    GraficaDonaComponent,
+    AccountSettingComponent,
+    PromesasComponent,
+    RxjsComponent
+  ],
   imports: [CommonModule, SharedModule, PAGES_ROUTES, FormsModule, ChartsModule],
   exports: [DashboardComponent, Graficas1Component, PageComponent, IncrementadorComponent, GraficaDonaComponent, AccountSettingComponent],
   providers: []
