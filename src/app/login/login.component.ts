@@ -11,7 +11,7 @@ declare let $: any;
 })
 export class LoginComponent implements OnInit {
   usuario = true;
-  constructor() {}
+  constructor(public rute: Router) {}
 
   ngOnInit() {}
 
@@ -32,5 +32,13 @@ export class LoginComponent implements OnInit {
   cancelarRegenerar() {
     $('#loginform').slideDown();
     $('#recoverform').fadeOut();
+  }
+
+  /**
+   * ingresar
+   */
+  public ingresar() {
+    this.rute.navigate(['/dashboard']);
+    console.log('ingresando');
   }
 }

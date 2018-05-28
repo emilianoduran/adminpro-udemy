@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .floating-labels .form-group {
     position: relative;
 }
@@ -163,4 +164,8 @@
 
 .form-group.issue .help-block ul li {
     list-style: none;
+=======
+#themecolors a {
+    cursor: pointer;
+>>>>>>> c1c531e7e616d49e9aea6ede06340c004c7cc1cc
 }

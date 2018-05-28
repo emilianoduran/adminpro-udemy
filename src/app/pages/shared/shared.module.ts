@@ -5,9 +5,11 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { BredcrumbsComponent } from './bredcrumbs/bredcrumbs.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [BredcrumbsComponent, SidebarComponent, HeaderComponent, NopagefoundComponent],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [BredcrumbsComponent, SidebarComponent, HeaderComponent, NopagefoundComponent],
   providers: []
 })
