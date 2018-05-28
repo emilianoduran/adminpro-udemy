@@ -7,12 +7,13 @@ import { PageComponent } from './page.component';
 // Routes child
 import { PAGES_ROUTES } from './pages.routing';
 import { SharedModule } from './shared/shared.module';
+import { DataEmpresaComponent } from './data-empresa/data-empresa.component';
 // Shareds Modules
 
 @NgModule({
-  declarations: [DashboardComponent, Graficas1Component, ProgressComponent, PageComponent],
+  declarations: [DashboardComponent, Graficas1Component, ProgressComponent, PageComponent, DataEmpresaComponent],
   imports: [CommonModule, SharedModule, PAGES_ROUTES],
-  exports: [DashboardComponent, Graficas1Component, ProgressComponent, PageComponent],
+  exports: [DashboardComponent, Graficas1Component, ProgressComponent, PageComponent, DataEmpresaComponent],
   providers: []
 })
 export class PagesModule {}
